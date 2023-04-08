@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require("express");
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
@@ -9,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.mongo)
+mongoose.connect(process.env.Mongo);
 
 const itemSchema={
     name:String
